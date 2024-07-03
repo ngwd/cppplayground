@@ -131,7 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BST_deserial_serial.h" />
+    <ClInclude Include="BST_traverse.h" />
+    <ClInclude Include="max_in_stack.h" />
     <ClInclude Include="RingBuffer.h" />
+    <ClInclude Include="soccer_points.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

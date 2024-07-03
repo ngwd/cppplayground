@@ -7,7 +7,9 @@
 #include <unordered_map>
 
 #include "BST_deserial_serial.h"
+#include "BST_traverse.h"
 #include "RingBuffer.h"
+#include "max_in_stack.h"
 using namespace std;
 
 bool isPalindrome(const std::wstring& str) {
@@ -108,7 +110,19 @@ void UT_arrange_strings_in_given_order() {
     arrage_strings_in_given_order(S, O);
 }
 
-
+std::string i2s(int i) {
+    std::string s = "";
+    while (i) {
+        int j = i/2;
+        if (j*2 == i) {
+            s.push_back('0');
+        }
+        else s.push_back('1');
+        i = j;
+    }
+    std::reverse(begin(s), end(s));
+    return s;
+}
 int main() {
     std::wstring str = L"上中上";
     if (isPalindrome_1(str)) {
@@ -124,6 +138,10 @@ int main() {
     // UT_GetMaxNegative();
     // UT_BST_serialize();
     // UT_BST_deserialize();
-    UT_ring_buffer();
+    // UT_ring_buffer();
+    // UT_preorder_traverse();
+    // UT_InOrder_traverse_Rc();
+    // std::cout << i2s(8) << endl;
+    UT_stack_with_max();
     return 0;
 }
